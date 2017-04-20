@@ -2,6 +2,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
+plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
+plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 
 font = FontProperties(fname=r"/Users/xuqidong/picCloud/SimHei.ttf")
 
@@ -23,7 +25,7 @@ ax.set_title(u'吃货大比拼',fontproperties=font)
 ax.set_xticks(ind+width)
 ax.set_xticklabels( ('G1', 'G2', 'G3', 'G4', 'G5') )
 
-ax.legend( (rects1[0], rects2[0]), (u'xu ke', u'cui gao ming'))
+ax.legend( (rects1[0], rects2[0]), (u'徐可', u'崔高明'))
 
 
 def autolabel(rects):
